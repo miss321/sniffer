@@ -184,19 +184,6 @@ class PacketSnifferWindow(QMainWindow):
             self.detail_text_edit.append("\nData summary:")
             self.detail_text_edit.append(packet.summary())
 
-    # def open_packet_details(self):
-    #     selected_items = self.table_widget.selectedItems()
-    #     if selected_items:
-    #         row = selected_items[0].row()
-    #         packet = self.table_widget.item(row, 0).data(Qt.UserRole)
-    #         if packet:
-    #             packet_details.show_packet_details(packet)
-
-    # def show_chart_window(self):
-    #     self.chart_window = tubiao.ChartWindow(self.packet_count)
-    #     self.chart_window.show()
-
-
 class SniffThread(QThread):
     packet_received = pyqtSignal(list, object)
 
